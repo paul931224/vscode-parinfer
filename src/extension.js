@@ -208,13 +208,12 @@ function disableParinfer (activeEditor) {
 function toggleMode (activeEditor) {
   editorStates.update(function (states) {
     const currentState = states.get(activeEditor)
-
-    let nextState = 'PAREN_MODE'
-    if (currentState === 'DISABLED' || currentState === 'PAREN_MODE') {
-      nextState = 'INDENT_MODE'
+    let nextState = `SMART_MODE`
+    if (currentState === 'SMART_MODE' || currentState === 'PAREN_MODE') {
+      nextState = 'DISABLED'
     }
 
-    if (nextState === 'INDENT_MODE' && config.useSmartMode) {
+    if (currentState === 'DISABLED') {
       nextState = 'SMART_MODE'
     }
 

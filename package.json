@@ -1,6 +1,6 @@
 {
   "name": "vscode-parinfer",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "displayName": "Parinfer",
   "description": "Automatically infer closing parens based on indentation. An essential tool for writing Lisp code.",
   "categories": ["Other"],
